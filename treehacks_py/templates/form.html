@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} PCOS Questionnaire {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Size of Right Follicles</label>
+        <input type="text" name="follicle_r"
+               placeholder="Size of Right Follicles" class="form-control"
+               value="{{ request.form['follicle_r'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Size of Left Follicles</label>
+        <input type="text" name="follicle_l"
+               placeholder="Size of Left Follicles" class="form-control"
+               value="{{ request.form['follicle_l'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">How would you rate your weight gain on a scale of 1-10? (1 is minimal)</label>
+        <input type="text" name="weight_gain"
+               placeholder="Weight gain" class="form-control"
+               value="{{ request.form['weight_gain'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">How would you rate your hair growth (hirutism) on a scale of 1-10? (1 is minimal)</label>
+        <input type="text" name="hair_growth"
+               placeholder="Hair growth" class="form-control"
+               value="{{ request.form['hair_growth'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Do you have any skin darkening? (1 for yes and 0 for no)</label>
+        <input type="text" name="skin_darkening"
+               placeholder="Skin darkening" class="form-control"
+               value="{{ request.form['skin_darkening'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">Is your cycle irregular? (1 for yes and 0 for no)
+        </label>
+        <input type="text" name="cycle_r"
+               placeholder="Cycle" class="form-control"
+               value="{{ request.form['cycle_r'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="title">How would you rate your fast food consumption on a scale of 1-10? (1 is minimal)</label>
+        <input type="text" name="fast_food"
+               placeholder="Fast food" class="form-control"
+               value="{{ request.form['fast_food'] }}"></input>
+    </div>
+
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
